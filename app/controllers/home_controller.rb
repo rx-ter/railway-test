@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  skip_before_action :http_basic_authenticate
+  
   autocomplete :station, :name
 
   # GET /homes

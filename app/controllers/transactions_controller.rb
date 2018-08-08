@@ -1,6 +1,8 @@
 class TransactionsController < ApplicationController
-  before_action :set_transaction, only: [:show, :destroy]
+  
+  skip_before_action :http_basic_authenticate, :only => [:buy_ticket_form, :buy_ticket]
 
+  before_action :set_transaction, only: [:show, :destroy]
   # GET /transactions
   # GET /transactions.json
   def index
@@ -39,9 +41,22 @@ class TransactionsController < ApplicationController
   end
 
   def buy_ticket_form
-    train = params[:train].to_i
-    cost = params[:cost].to_f
+    train = params[:train][:train].to_i
+    cost = params[:cost][:cost].to_f
     @transaction = Transaction.new(train_id: train, cost: cost)
+  end
+
+  def buy_ticket
+    @transaction = Transaction.new(transaction_params)
+      respond_to do |format|
+        if @transaction.save
+          format.html { redirect_to :root, notice: 'Ticket has been bought' }
+          format.json { render :index, status: :created, location: '/' }
+        else
+          format.html { render :new }
+          format.json { render json: @transaction.errors, status: :unprocessable_entity }
+        end
+    end
   end
 
   private

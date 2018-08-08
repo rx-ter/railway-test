@@ -10,6 +10,7 @@
                             <th>Arrival station</th>
                             <th>Passengers capacity</th>
                             <th>Price</th>
+                            <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -18,6 +19,16 @@
                                 <td><%= train.train_route.arrival_station.name %></td>
                                 <td><%= train.passengers_capacity %></td>
                                 <td><%= train.price %></td>
+                                <td>
+                                <%= form_with url: buy_ticket_form_path, local: true do |form| %>
+                                     <%= hidden_field(:train, :train, :value => train.id) %>
+                                     <%= hidden_field(:cost, :cost, :value => train.price) %>
+                                    <%= form.submit 'Buy', class: 'btn submit'%>
+                                        <% end %>
+
+                                
+                                </td>
+
                             </tr>
                         </tbody>
                 <% end %>

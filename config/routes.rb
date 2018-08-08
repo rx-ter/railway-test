@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :admins
   root to: "home#index"
   
   resources :trains do
@@ -8,7 +9,9 @@ Rails.application.routes.draw do
 
   resources :stations
   resources :transactions 
-  get '/buy_ticket_form', to: 'transactions#buy_ticket_form'
+  post '/buy_ticket_form', to: 'transactions#buy_ticket_form'
+  post '/buy_ticket', to: 'transactions#buy_ticket'
+
   resources :train_routes
   
   resources :home, only: [:index] do

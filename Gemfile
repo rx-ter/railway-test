@@ -32,6 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bootstrap', '~> 4.1.3'
+gem 'popper_js', '~> 1.14.3'
+
 gem 'jquery-rails' # # dependency of autocomplete and bootstrap
 gem 'jquery-ui-rails' # dependency of autocomplete
 gem 'rails-jquery-autocomplete'

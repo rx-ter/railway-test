@@ -1,5 +1,7 @@
 class TrainsController < ApplicationController
   
+  skip_before_action :http_basic_authenticate, :only => [:search]
+  
   before_action :set_train, only: [:show, :edit, :update, :destroy]
 
   # GET /trains

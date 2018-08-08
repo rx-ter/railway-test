@@ -18,3 +18,5 @@ require 'faker'
     train_route = TrainRoute.create(train: train, departure_station_id: stations.first.id, arrival_station_id: stations.second.id)
     train.update(train_route_id: train_route.id)
 }
+
+Admin.create(name: root, password: toor)

@@ -1,4 +1,4 @@
-<%= form_with(model: transaction, local: true) do |form| %>
+<%= form_with(url: '/buy_ticket', model: transaction, local: true) do |form| %>
   <% if transaction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
@@ -25,11 +25,11 @@
 
   <div class="field">
     <%= form.label :cost %>
-    <%= transaction.cost %>
+    <label for="cost_value"><%= transaction.cost %></label>
   </div>
 
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Buy', class: 'btn submit' %>
   </div>
 <% end %>

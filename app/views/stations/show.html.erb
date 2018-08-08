@@ -1,19 +1,20 @@
 <p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
+    <p>
+      <strong>Name:</strong>
+      <%= @station.name %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @station.name %>
-</p>
+    <p>
+      <strong>City:</strong>
+      <%= @station.city %>
+    </p>
 
-<p>
-  <strong>City:</strong>
-  <%= @station.city %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @station.address %>
+    </p>
+</div>
 
-<p>
-  <strong>Address:</strong>
-  <%= @station.address %>
-</p>
-
-<%= link_to 'Edit', edit_station_path(@station) %> |
-<%= link_to 'Back', stations_path %>
+    <%= link_to 'Edit', edit_station_path(@station) %> |
+    <%= link_to 'Back', stations_path %>

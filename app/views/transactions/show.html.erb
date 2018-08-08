@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
+<div class="row justify-content-center">
 
-<p>
-  <strong>Cost:</strong>
-  <%= @transaction.cost %>
-</p>
+  <p>
+    <strong>Cost:</strong>
+    <%= @transaction.cost %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @transaction.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @transaction.description %>
+  </p>
 
-<p>
-  <strong>User name:</strong>
-  <%= @transaction.user_name %>
-</p>
+  <p>
+    <strong>User name:</strong>
+    <%= @transaction.user_name %>
+  </p>
 
-<%= link_to 'Back', transactions_path %>
+</div>
+  <%= link_to 'Back', transactions_path %>
