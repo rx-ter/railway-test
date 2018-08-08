@@ -1,0 +1,98 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .ui-autocomplete {
+    position:absolute;
+    top:100%;
+    left:0;
+    z-index:1000;
+    float:left;
+    display:none;
+    min-width:160px;
+    _width:160px;
+    padding:4px 0;
+    margin:2px 0 0 0;
+    list-style:none;
+    background-color:#ffffff;
+    border-color:#ccc;
+    border-color:rgba(0,0,0,0.2);
+    border-style:solid;
+    border-width:1px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    -webkit-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+    -webkit-background-clip:padding-box;
+    -moz-background-clip:padding;
+    background-clip:padding-box;
+    *border-right-width:2px;
+    *border-bottom-width:2px
+   }
+   .ui-autocomplete .ui-menu-item>a.ui-corner-all {
+    display:block;
+    padding:3px 15px;
+    clear:both;
+    font-weight:normal;
+    line-height:18px;
+    color:#555555;
+    white-space:nowrap
+   }
+   .ui-widget-content .ui-state-focus {
+    color:#ffffff;
+    text-decoration:none;
+    background-color:#0088cc;
+    border-radius:0px;
+    -webkit-border-radius:0px;
+    -moz-border-radius:0px;
+    background-image:none
+   }
+
+.image-header {
+    background: url("all-trains-rely-on-traction.jpg") 0 -130px no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 400px;
+    opacity: 0.3;
+    margin-bottom: 20px;
+} 
+.ui-helper-hidden-accessible {
+    display: none;
+}
+ #adv-search {
+     display: flex;
+    justify-content: center;
+ }
+
+ h1 {
+     text-align: center;
+     margin-bottom: 3.5rem !important;
+     margin-top: 3.5rem !important;
+
+ }
+
+ .submit-button {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem auto;
+ }
+
+ .button-size {
+     width: 40%;
+ }

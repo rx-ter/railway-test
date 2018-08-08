@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure_station_id: 1
+  arrival_station_id: 1
+  departure_time: 2018-08-06 20:30:48
+  arrival_time: 2018-08-06 20:30:48
+  passengers_capacity: 1
+  price: 1.5
+
+two:
+  departure_station_id: 1
+  arrival_station_id: 1
+  departure_time: 2018-08-06 20:30:48
+  arrival_time: 2018-08-06 20:30:48
+  passengers_capacity: 1
+  price: 1.5

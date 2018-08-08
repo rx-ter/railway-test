@@ -1,0 +1,28 @@
+ <h1>Search results</h1>
+            <div class="row justify-content-center">
+                <div class="col-6">
+                <% if @trains.present? %>
+                <% @trains.each do |train| %>
+                    <table>
+                        <thead>
+                            <tr>
+                            <th>Departure station</th>
+                            <th>Arrival station</th>
+                            <th>Passengers capacity</th>
+                            <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                <td><%= train.train_route.departure_station.name %></td>
+                                <td><%= train.train_route.arrival_station.name %></td>
+                                <td><%= train.passengers_capacity %></td>
+                                <td><%= train.price %></td>
+                            </tr>
+                        </tbody>
+                <% end %>
+                <% else %>
+                <center><h3>No trains has been found, please try again later</h3></center>
+                <% end %>
+                </div>            
+            </div>

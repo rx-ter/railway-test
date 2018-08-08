@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<% content_for :title, "My special railway homepage" %>
+	<div class="row image-header">
+
+  </div>
+	<div class="row">
+		<div class="col-md-12">
+              <%= form_tag("/search", method: "get") do %>
+              <div class="input-group" id="adv-search">
+                  <%= text_field_tag :departure_station, params[:search], 
+                                                      data: { autocomplete: '/home/autocomplete_station_name'}, 
+                                                              class: "form-control", placeholder: "Departure station"  %>
+                  <button type="button" class="btn button-change"><strong>&#8596;</strong></button>
+                  <%= text_field_tag :arrival_station, params[:search], 
+                                                      data: { autocomplete: '/home/autocomplete_station_name'}, 
+                                                              class: "form-control",  placeholder: "Arrival station" %>
+                </div>
+              </div>              
+                <div class="col-md-6 submit-button">
+                  <button type="button" class="btn button-size button-clear">Clear</button>
+
+                  <%= submit_tag "Search", class: "btn submit button-size"  %>
+                  
+              </div>              
+
+              <% end %>
+            </div>
+          </div>
+        </div>
+	</div>
+</div>
+
+<script>
+// clear input fields on page reload
+$( document ).ready(function() {
+  $("#departure_station").val('');
+  $("#arrival_station").val('');  
+});
+// button arrival and departure values replace
+$('.button-change').click(function() {
+  var departure =  $("#departure_station").val();
+  var arrival =  $("#arrival_station").val();
+  $("#departure_station").val(arrival);
+  $("#arrival_station").val(departure);
+});
+
+$('.button-clear').click(function() {
+  $("#departure_station").val('');
+  $("#arrival_station").val('');
+});
+</script>

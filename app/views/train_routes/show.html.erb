@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Departure station:</strong>
+  <%= @train.departure_station_id %>
+</p>
+
+<p>
+  <strong>Arrival station:</strong>
+  <%= @train.arrival_station_id %>
+</p>
+
+<p>
+  <strong>Train:</strong>
+  <%= @train.passengers_capacity %>
+</p>
+
+<%= link_to 'Edit', edit_train_route_path(@train_route) %> |
+<%= link_to 'Back', train_routes_path %>
