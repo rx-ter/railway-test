@@ -63,7 +63,7 @@
    }
 
 .image-header {
-    background: url("<%= asset_path("all-trains-rely-on-traction.jpg") %>") 0 -130px no-repeat;
+    background: url("all-trains-rely-on-traction.jpg") 0 -130px no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
